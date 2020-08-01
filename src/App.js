@@ -86,10 +86,10 @@ function DropdownMenu() {
             Settings
           </DropdownItem>
           <DropdownItem
-            leftIcon="🦧"
+            leftIcon={<i class="fas fa-info-circle"></i>}
             rightIcon={<ChevronIcon />}
-            goToMenu="animals">
-            Animals
+            goToMenu="moreInfo">
+            More Info
           </DropdownItem>
 
         </div>
@@ -103,7 +103,7 @@ function DropdownMenu() {
         onEnter={calcHeight}>
         <div className="menu">
           <DropdownItem goToMenu="main" leftIcon={<ArrowIcon />}>
-            <h2>My Tutorial</h2>
+            <h2>My App</h2>
           </DropdownItem>
           <DropdownItem leftIcon={<BoltIcon />}>HTML</DropdownItem>
           <DropdownItem leftIcon={<BoltIcon />}>CSS</DropdownItem>
@@ -113,19 +113,19 @@ function DropdownMenu() {
       </CSSTransition>
 
       <CSSTransition
-        in={activeMenu === 'animals'}
+        in={activeMenu === 'moreInfo'}
         timeout={500}
         classNames="menu-secondary"
         unmountOnExit
         onEnter={calcHeight}>
         <div className="menu">
           <DropdownItem goToMenu="main" leftIcon={<ArrowIcon />}>
-            <h2>Animals</h2>
+            <h2>More Info</h2>
           </DropdownItem>
-          <DropdownItem leftIcon="🦘">Kangaroo</DropdownItem>
-          <DropdownItem leftIcon="🐸">Frog</DropdownItem>
-          <DropdownItem leftIcon="🦋">Horse?</DropdownItem>
-          <DropdownItem leftIcon="🦔">Hedgehog</DropdownItem>
+          <DropdownItem leftIcon={<i class="fab fa-github-square"></i>}>Github</DropdownItem>
+          <DropdownItem leftIcon={<i class="fab fa-linkedin"></i>}>LinkedIn</DropdownItem>
+          <DropdownItem leftIcon={<i class="fab fa-twitter-square"></i>}>Twitter</DropdownItem>
+          <DropdownItem leftIcon={<i class="fab fa-facebook"></i>}>Facebook</DropdownItem>
         </div>
       </CSSTransition>
     </div>
